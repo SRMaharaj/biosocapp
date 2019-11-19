@@ -16,7 +16,9 @@ function addToCart(itemName, itemPrice, image) {
   db.collection('cart').add({
     image: image,
     itemName: itemName,
-    price:itemPrice
+    price:itemPrice,
+    quantity:1,
+    cost:itemPrice
   });
 }
 
