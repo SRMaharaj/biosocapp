@@ -53,15 +53,27 @@ function renderCart(doc){
   input.addEventListener("click",function(){
     var val = input.value;
     var priceOfItem = doc.data().price;
-    tdCost.textContent='$'+val*priceOfItem;
-    updateFirebase(doc.data().id,val,tdCost.textContent);
+    if(val<=1){
+       input.value=1;
+       tdCost.textContent='$'+priceOfItem;
+    }
+    else{
+      tdCost.textContent='$'+input.value*priceOfItem+'.00';
+      updateFirebase(doc.data().id,val,tdCost.textContent);
+    }
   });
   input.addEventListener("keydown", function(event){
-    if(event.keycode==13){
-      var val = input.value;
+    if(event.keyCode==13){
       var priceOfItem= doc.data().price;
-      tdCost.textContent='$'+(val*priceOfItem);
-      updateFirebase(doc.data().id,val,tdCost.textContent);
+      var val = input.value;
+      if(val<=1){
+         input.value=1;
+         tdCost.textContent='$'+priceOfItem;
+       }
+       else{
+         tdCost.textContent='$'+input.value*priceOfItem+'.00';
+         updateFirebase(doc.data().id,val,tdCost.textContent);
+      }
     }
   });
   tdQuantity.appendChild(input);
@@ -93,8 +105,8 @@ function renderCart(doc){
 }
 
 function updateFirebase(docID,val,cost){
-  db.collection('cart').doc(docID).update({
-    cost:cost,
-    quantity:val
-  });
+  // db.collection('cart').doc(docID).update({
+  //   cost:cost,
+  //   quantity:val
+  // });
 }
