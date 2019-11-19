@@ -3,7 +3,7 @@
 
 <head>
   <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="HTML5 Template" />
@@ -644,43 +644,24 @@ product -->
   <!-- custom -->
   <script type="text/javascript" src="js/custom.js"></script>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-
-
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-  <script src="/__/firebase/7.4.0/firebase-analytics.js"></script>
-
-  <!-- Add Firebase products that you want to use -->
-  <script src="/__/firebase/7.4.0/firebase-auth.js"></script>
-  <script src="/__/firebase/init.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
-
-<script>
+  <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyBUpcMT1ZpTGue689cdPuB61SgdxPGDBq4",
-    authDomain: "biological-society-websi-74859.firebaseapp.com",
-    databaseURL: "https://biological-society-websi-74859.firebaseio.com",
-    projectId: "biological-society-websi-74859",
-    storageBucket: "biological-society-websi-74859.appspot.com",
-    messagingSenderId: "357263872848",
-    appId: "1:357263872848:web:bc1fd875fd7a122e509255",
-    measurementId: "G-WHGW785EDS"
+    apiKey: "AIzaSyA8bdl1D-1x11UyHBO172TmlXJlgYomIWc",
+    authDomain: "biologicalsocietywebapp.firebaseapp.com",
+    databaseURL: "https://biologicalsocietywebapp.firebaseio.com",
+    projectId: "biologicalsocietywebapp",
+    storageBucket: "biologicalsocietywebapp.appspot.com",
+    messagingSenderId: "273106372445",
+    appId: "1:273106372445:web:86a1ecc50d72f1fd634ab4",
+    measurementId: "G-TKVHMHHB0V"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var db = firebase.firestore();
-  firebase.analytics();
-
-
-</script>
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    firebase.analytics();
+  </script>
 <script type="text/javascript" src="shop.js"></script>
 </body>
 
