@@ -167,6 +167,7 @@
               <li><a href="meet-the-team.html"> Meet the Team </i></a></li>
               <li><a href="shop-home.html"> Shop </a></li>
               <li><a href = "forum.html"> Forum </a> </li>
+              <li><a href="signup-04.html"> Sign Up </a></li>
             </ul>
           </div>
         </div>
@@ -244,7 +245,29 @@
 
 
  <div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
+ <!-- Firebase -->
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA8bdl1D-1x11UyHBO172TmlXJlgYomIWc",
+    authDomain: "biologicalsocietywebapp.firebaseapp.com",
+    databaseURL: "https://biologicalsocietywebapp.firebaseio.com",
+    projectId: "biologicalsocietywebapp",
+    storageBucket: "biologicalsocietywebapp.appspot.com",
+    messagingSenderId: "273106372445",
+  };
 
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  //auth and firestore references
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
  <!--=================================
   jquery -->
 
