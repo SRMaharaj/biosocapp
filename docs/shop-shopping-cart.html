@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app-firestore.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="keywords" content="HTML5 Template" />
@@ -33,7 +35,7 @@
 
   <!-- Responsive -->
   <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-
+  
 
 </head>
 
@@ -415,9 +417,9 @@ shop -->
 
   <!-- custom -->
   <script type="text/javascript" src="js/custom.js"></script>
-  <script type="text/javascript" src="cart.js"></script>
+  <script type="text/javascript" src="shoppingcart.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -437,7 +439,9 @@ shop -->
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
     firebase.analytics();
+    <script type="text/javascript" src="shoppingcart.js"></script>
   </script>
 </body>
 
