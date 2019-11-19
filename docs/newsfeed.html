@@ -119,7 +119,7 @@
 
                    <!-- Shopping Cart Icon-->
                    <div class="shpping-cart">
-                     <a class="cart-btn" > <i class="fa fa-shopping-cart icon"></i> <strong class="item">2</strong></a>
+                     <a class="cart-btn" href="#"> <i class="fa fa-shopping-cart icon"></i> <strong class="item">2</strong></a>
                      <div class="cart">
                        <div class="cart-title">
                          <h6 class="uppercase mb-0">Shopping cart</h6>
@@ -142,12 +142,13 @@
    </div>
  </header>
 
- <div id="divifm">
 
-  <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%2300204a&amp;ctz=America%2FPort_of_Spain&amp;src=dXdpYmlvc29jaWV0eUBnbWFpbC5jb20&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udHQjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2322AA99&amp;color=%23329262&amp;color=%231F753C&amp;showTz=0&amp;showCalendars=0&amp;showPrint=0&amp;showDate=1&amp;showNav=0&amp;showTitle=1&amp;title=Events%20" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
 
 </div>
 
+<div class="feedgrabbr_widget" id="fgid_5ee757ccb4c2e1e895459bb1b"></div>
+<script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_5ee757ccb4c2e1e895459bb1b");</script>
+<script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
 
  <!--=================================
   footer -->
@@ -164,7 +165,6 @@
               <li><a href="meet-the-team.html"> Meet the Team </i></a></li>
               <li><a href="shop-home.html"> Shop </a></li>
               <li><a href = "forum.html"> Forum </a> </li>
-              <li><a href="signup-04.html"> Sign Up </a></li>
             </ul>
           </div>
         </div>
@@ -172,8 +172,8 @@
           <div class="footer-useful-link footer-hedding">
             <h6 class="text-white mb-30 mt-10 text-uppercase">Useful Links</h6>
             <ul>
-              <li><a href="modal-onload-login.html">Login</a></li>
-              <li><a href="modal-onload-register.html">Create Account</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Create Account</a></li>
             </ul>
           </div>
         </div>
@@ -219,7 +219,7 @@
                 <script>
                   document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
                 </script>
-              </span> <a > The UWI Biological Society </a> All Rights Reserved</p>
+              </span> <a href="#"> The UWI Biological Society </a> All Rights Reserved</p>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 text-right xs-text-left">
             <div class="footer-widget-social">
@@ -242,29 +242,7 @@
 
 
  <div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
- <!-- Firebase -->
- <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyA8bdl1D-1x11UyHBO172TmlXJlgYomIWc",
-    authDomain: "biologicalsocietywebapp.firebaseapp.com",
-    databaseURL: "https://biologicalsocietywebapp.firebaseio.com",
-    projectId: "biologicalsocietywebapp",
-    storageBucket: "biologicalsocietywebapp.appspot.com",
-    messagingSenderId: "273106372445",
-  };
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  //auth and firestore references
-  const auth = firebase.auth();
-  const db = firebase.firestore();
-</script>
  <!--=================================
   jquery -->
 

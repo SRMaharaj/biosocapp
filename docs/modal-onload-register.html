@@ -349,44 +349,32 @@ var plugin_path = 'js/';
 </script>
 
 
-<!-- custom -->
-<script type="text/javascript" src="js/custom.js"></script>
-<script type="text/javascript" src="cart.js"></script>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<!-- Firebase -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA8bdl1D-1x11UyHBO172TmlXJlgYomIWc",
+      authDomain: "biologicalsocietywebapp.firebaseapp.com",
+      databaseURL: "https://biologicalsocietywebapp.firebaseio.com",
+      projectId: "biologicalsocietywebapp",
+      storageBucket: "biologicalsocietywebapp.appspot.com",
+      messagingSenderId: "273106372445",
+    };
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
- https://firebase.google.com/docs/web/setup#available-libraries -->
-<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
 
-<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-<script src="/__/firebase/7.4.0/firebase-app.js"></script>
+    //auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
 
-<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-<script src="/__/firebase/7.4.0/firebase-analytics.js"></script>
-
-<!-- Add Firebase products that you want to use -->
-<script src="/__/firebase/7.4.0/firebase-auth.js"></script>
-<script src="/__/firebase/7.4.0/firebase-firestore.js"></script>
-<script src="/__/firebase/init.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
-
-<script>
-// Your web app's Firebase configuration
-var firebaseConfig = {
-apiKey: "AIzaSyBUpcMT1ZpTGue689cdPuB61SgdxPGDBq4",
-authDomain: "biological-society-websi-74859.firebaseapp.com",
-databaseURL: "https://biological-society-websi-74859.firebaseio.com",
-projectId: "biological-society-websi-74859",
-storageBucket: "biological-society-websi-74859.appspot.com",
-messagingSenderId: "357263872848",
-appId: "1:357263872848:web:bc1fd875fd7a122e509255",
-measurementId: "G-WHGW785EDS"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-</script>
+  <!-- custom JS files -->
+  <!-- <script src="js/auth.js"></script> -->
 </body>
 
 
