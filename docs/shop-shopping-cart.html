@@ -102,11 +102,13 @@
                   <div class="menu-bar">
                     <ul class="menu-links">
 
+                      <li><a href = "signup.html"> Register </a> </li>
+                      <li class="logged-out"><a href="#" data-toggle="modal" data-target="#loginModal"> Login </a></li>
                       <li><a href="index.html"> Home </a></li>
                       <li><a href="about-us.html"> About Us </a></li>
-                      <li><a href="meet-the-team.html"> Meet the Team </i></a></li>
+                      <li><a href="newsfeed.html"> NewsFeed</a></li>
+                      <li class="logged-in"><a href="#" id="logout"> Logout </a></li>
                       <li class="active"><a href="shop-home.html"> Shop </a></li>
-                      <li><a href="forum.html"> Forum </a> </li>
 
 
                       <div class="search-cart">
@@ -128,7 +130,7 @@
                               <h6 class="uppercase mb-0">Shopping cart</h6>
                             </div>
                             <div class="cart-total">
-                              <h6 class="mb-15"> Total: $0.00</h6>
+                              <!-- <h6 class="mb-15"> Total: $0.00</h6> -->
                               <a class="button" href="shop-shopping-cart.html">View Cart</a>
                               <a class="button black" href="shop-checkout.html">Checkout</a>
                             </div>
@@ -194,93 +196,14 @@ shop -->
                   </tr>
                 </thead>
                 <tbody id="list">
-                  <!--<tr>
-                    <td class="image">
-                      <a class="media-link" href="#"> <img class="img-responsive" src="images/shop/01.jpg" alt="" /></a>
-                    </td>
-                    <td class="description">
-                      <a href="#">T-Shirt With Spliced All Over Print</a>
-                    </td>
-                    <td class="price">$90.00</td>
-                    <td class="td-quentety">
-                      <input type="number" value="1">
-                    </td>
-                    <td class="price price-2">In stock</td>
-                    <td class="total">
-                      <a><i class="fa fa-close"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="image">
-                      <a class="media-link" href="#"> <img class="img-responsive" src="images/shop/02.jpg" alt="" /></a>
-                    </td>
-                    <td class="description">
-                      <a href="#">French Connection Tank</a>
-                    </td>
-                    <td class="price">$100.00</td>
-                    <td class="td-quentety">
-                      <input type="number" value="3">
-                    </td>
-                    <td class="price price-2">Out of stock</td>
-                    <td class="total">
-                      <a><i class="fa fa-close"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="image">
-                      <a class="media-link" href="#"> <img class="img-responsive" src="images/shop/03.jpg" alt="" /></a>
-                    </td>
-                    <td class="description">
-                      <a>T-Shirt With Spliced All Over Print</a>
-                    </td>
-                    <td class="price">$500.00</td>
-                    <td class="td-quentety">
-                      <input type="number" value="2">
-                    </td>
-                    <td class="price price-2">In stock</td>
-                    <td class="total">
-                      <a><i class="fa fa-close"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="image">
-                      <a class="media-link" href="#"> <img class="img-responsive" src="images/shop/04.jpg" alt="" /></a>
-                    </td>
-                    <td class="description">
-                      <a href="#">French Connection Tank</a>
-                    </td>
-                    <td class="price">$40.00</td>
-                    <td class="td-quentety">
-                      <input type="number" value="4">
-                    </td>
-                    <td class="price price-2">In stock</td>
-                    <td class="total">
-                      <a><i class="fa fa-close"></i></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="image">
-                      <a class="media-link" href="#"> <img class="img-responsive" src="images/shop/05.jpg" alt="" /></a>
-                    </td>
-                    <td class="description">
-                      <a href="#">T-Shirt With Spliced All Over Print</a>
-                    </td>
-                    <td class="price">$90.00</td>
-                    <td class="td-quentety">
-                      <input type="number" value="5">
-                    </td>
-                    <td class="price price-2">In stock</td>
-                    <td class="total">
-                      <a><i class="fa fa-close"></i></a>
-                    </td>
-                  </tr>
+
                 </tbody>
               </table>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <div class="  pl-50 pr-50 pt-50 pb-50">
       <table class="mb-30">
@@ -290,7 +213,7 @@ shop -->
               <h3>GRAND TOTAL:</h3>
             </th>
             <td class="pl-40">
-              <h3>$0.00</h3>
+              <h3 class="grand-total">$0.00</h3>
             </td>
           </tr>
         </tbody>

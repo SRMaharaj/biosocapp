@@ -1,18 +1,33 @@
 
 
 var list = document.querySelector("#list");
-
+var grandTotal = document.querySelector("h3.grand-total");
 
 //This function pulls data from the cart database
-db.collection('cart').get().then(function(snapshot){
-  snapshot.docs.forEach(doc =>{
-  renderCart(doc);
+// db.collection('cart').get().then(function(snapshot){
+//   snapshot.docs.forEach(doc =>{
+//   renderCart(doc);
+//   });
+// });
+
+//real time listener
+db.collection('cart').orderBy('itemName').onSnapshot(snapshot =>{
+  let changes=snapshot.docChanges();
+
+  changes.forEach(change =>{
+    if(change.type=='added'){
+      renderCart(change.doc);
+    }
+    else if(change.type=='removed'){
+      let tr=cafeList.querySelector('[data-id='+change.doc.id+']');
+      list.removeChild(tr);
+    }
   });
 });
 
 
+//This function renders the items from the cart database to the webpage
 function renderCart(doc){
-
   let image = document.createElement('img');
   image.classList.add('image-responsive');
 
@@ -26,6 +41,7 @@ function renderCart(doc){
   image.src=doc.data().image;
 
   let tr = document.createElement('tr');
+  tr.setAttribute('data-id',doc.id);
 
   let tdImage=document.createElement('td');
   tdImage.classList.add('image');
@@ -59,7 +75,7 @@ function renderCart(doc){
     }
     else{
       tdCost.textContent='$'+input.value*priceOfItem+'.00';
-      updateFirebase(doc.data().id,val,tdCost.textContent);
+      updateFirebase(doc.id,val,tdCost.textContent.split('$')[1]);
     }
   });
   input.addEventListener("keydown", function(event){
@@ -72,7 +88,7 @@ function renderCart(doc){
        }
        else{
          tdCost.textContent='$'+input.value*priceOfItem+'.00';
-         updateFirebase(doc.data().id,val,tdCost.textContent);
+         updateFirebase(doc.id,val,tdCost.textContent.split('$')[1]);
       }
     }
   });
@@ -85,6 +101,11 @@ function renderCart(doc){
   i.classList.add('fa');
   i.classList.add('fa-close');
   aTotal.appendChild(i);
+  aTotal.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    let id = e.target.parentElement.parentElement.parentElement.getAttribute('data-id');
+    db.collection('cart').doc(id).delete();
+  });
   tdTotal.appendChild(aTotal);
 
   tr.appendChild(tdImage);
@@ -95,18 +116,13 @@ function renderCart(doc){
   tr.appendChild(tdTotal);
 
   list.appendChild(tr);
-//
-//   cross.addEventListener('click', (e)=>{
-//     e.stopPropagation();
-//     let id = e.target.parentElement.getAttribute('data-id');
-//     db.collection('cart').doc(id).delete();
-//   });
-// }
+
+
 }
 
 function updateFirebase(docID,val,cost){
-  // db.collection('cart').doc(docID).update({
-  //   cost:cost,
-  //   quantity:val
-  // });
+   db.collection('cart').doc(docID).update({
+     cost:cost,
+     quantity:val
+   });
 }
