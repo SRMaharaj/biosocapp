@@ -15,6 +15,9 @@ signupForm.addEventListener('submit', (e) => {
         // const modal = document.querySelector('#signupModal');
         $('#signupModal').modal('hide');
         signupForm.reset();
+        signupForm.querySelector('.errorMessage').innerHTML = '';
         $('#successModal').modal('show');
+    }).catch(err => {
+        signupForm.querySelector('.errorMessage').innerHTML = err.message;
     });
 });

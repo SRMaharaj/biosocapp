@@ -31,11 +31,14 @@ loginForm.addEventListener('submit', (e) => {
     const password = loginForm['login-password'].value;
 
      //login the user
-     auth.signInWithEmailAndPassword(email, password).then(cred => {
+    auth.signInWithEmailAndPassword(email, password).then(cred => {
         //console.log(cred.user); //test
         // const modal = document.querySelector('#loginModal');
         $('#loginModal').modal('hide');
         loginForm.reset();
+        loginForm.querySelector('.errorMessage').innerHTML = '';
+    }).catch(err => {
+        loginForm.querySelector('.errorMessage').innerHTML = err.message;
     });
 
 });
