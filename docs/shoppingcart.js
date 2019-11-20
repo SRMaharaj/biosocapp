@@ -1,7 +1,7 @@
 
 
 var list = document.querySelector("#list");
-
+var grandTotal = document.querySelector("h3.grand-total");
 
 //This function pulls data from the cart database
 // db.collection('cart').get().then(function(snapshot){
@@ -10,24 +10,24 @@ var list = document.querySelector("#list");
 //   });
 // });
 
-
 //real time listener
 db.collection('cart').orderBy('itemName').onSnapshot(snapshot =>{
   let changes=snapshot.docChanges();
+
   changes.forEach(change =>{
-    if(change.type=='added')
+    if(change.type=='added'){
       renderCart(change.doc);
+    }
     else if(change.type=='removed'){
       let tr=cafeList.querySelector('[data-id='+change.doc.id+']');
       list.removeChild(tr);
     }
   });
-})
+});
 
 
 //This function renders the items from the cart database to the webpage
 function renderCart(doc){
-
   let image = document.createElement('img');
   image.classList.add('image-responsive');
 
