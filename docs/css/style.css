@@ -1909,3 +1909,12 @@ img.bottom-img { top: 0; }
 .mega-menu > section.menu-list-items .search-cart .search { float: none !important; }
 .search-cart .shpping-cart { vertical-align: middle; }
 }
+
+/* Calendar Styling */
+#divifm{padding-left:250px; background-color:#00204A;}
+
+/* Newsfeed Styling */
+#fg-widget-5ee757ccb4c2e1e895459bb1b .uw-sc-mask {
+  margin: 18px !important;
+  padding-left: 375px;
+}

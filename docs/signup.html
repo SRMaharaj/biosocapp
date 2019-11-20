@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="keywords" content="HTML5 Template" />
-<meta name="description" content="UWI Biological Society's Website" />
-<meta name="author" content="potenzaglobalsolutions.com" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>The UWI Biological Society's Shop</title>
 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="HTML5 Template" />
+  <meta name="description" content="UWI Biological Society's Shop" />
+  <meta name="author" content="Nybbles Software Engineering Team" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>The UWI Biological Society's Shop</title>
 <!-- Favicon -->
 <link rel="shortcut icon" href="images/favicon.ico" />
 
@@ -27,9 +27,11 @@
 <!-- Style -->
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 
+<!-- shop -->
+<link href="css/shop.css" rel="stylesheet" type="text/css" />
+
 <!-- Responsive -->
 <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-
 
 </head>
 
@@ -39,18 +41,19 @@
 
 <!--=================================
  preloader -->
- <div id="pre-loader">
-     <img src="images/pre-loader/loader-13.svg" alt="">
- </div>
 
- <!--=================================
-  preloader -->
+<div id="pre-loader">
+    <img src="images/pre-loader/loader-13.svg" alt="">
+</div>
+
+<!--=================================
+ preloader -->
 
 
- <!--=================================
-  header -->
+<!--=================================
+ header -->
 
-  <header id="header" style="background-color:#00204A">
+ <header id="header" style="background-color:#00204A">
 
     <div class="topbar">
       <div class="container">
@@ -76,7 +79,7 @@
     </div>
     <!--=================================
   mega menu -->
-
+ 
     <div class="menu">
       <!-- menu start -->
       <nav id="menu" class="mega-menu">
@@ -88,34 +91,26 @@
                 <!-- menu logo -->
                 <ul class="menu-logo">
                   <li>
-                    <a href="index-01.html"><img id="logo_img" src="images/BIOSOCLOGO.png" alt="logo"> </a>
+                    <a href="index.html"><img id="logo_img" src="images/BIOSOCLOGO.png" alt="logo"> </a>
                   </li>
                 </ul>
                 <!-- menu links -->
                 <div class="menu-bar">
                   <ul class="menu-links">
-
-                    <li class="active"><a href="index.html"> Home </a></li>
+                    
+                    <li class="active"><a href = "signup.html"> Register </a> </li>
+                    <li class="logged-out"><a href="#" data-toggle="modal" data-target="#loginModal"> Login </a></li>
+                    <li><a href="index.html"> Home </a></li>
                     <li><a href="about-us.html"> About Us </a></li>
-                    <li><a href="meet-the-team.html"> Meet the Team </a></li>
+                    <li><a href="newsfeed.html"> NewsFeed</a></li>
+                    <li class="logged-in"><a href="#" id="logout"> Logout </a></li>
                     <li><a href="shop-home.html"> Shop </a></li>
-                    <li><a href = "forum.html"> Forum </a> </li>
-
-
+ 
                   <div class="search-cart">
-
-                    <!-- Search Button -->
-                    <div class="search">
-                      <a class="search-btn not_click" href="javascript:void(0);"></a>
-                      <div class="search-box not-click">
-                        <input type="text" class="not-click form-control" placeholder="Search" value="" name="s">
-                        <i class="fa fa-search"></i>
-                      </div>
-                    </div>
-
+ 
                     <!-- Shopping Cart Icon-->
                     <div class="shpping-cart">
-                      <a class="cart-btn" > <i class="fa fa-shopping-cart icon"></i> <strong class="item">2</strong></a>
+                      <a class="cart-btn" href="#"> <i class="fa fa-shopping-cart icon"></i> <strong class="item">2</strong></a>
                       <div class="cart">
                         <div class="cart-title">
                           <h6 class="uppercase mb-0">Shopping cart</h6>
@@ -137,119 +132,78 @@
       <!-- menu end -->
     </div>
   </header>
-
-<!--=================================
- header -->
-
-
-<!--=================================
-page-title-->
-
-<section class="page-title bg-overlay-black-60 parallax" data-jarallax='{"speed": 0.6}' style="background-image: url(images/shopProducts/plant.jpg);">
-  <div class="container">
-    <div class="row">
-     <div class="col-lg-12">
-      <div class="page-title-name">
-         <h1>The UWI Biological Society</h1>
-          <p>Education, Restoration, Preservation</p>
+ 
+ <!-- body -->
+ <div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
+    Sign Up
+    </button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Join the movement</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-          <ul class="page-breadcrumb">
-            <li><a href="index.html"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
-            <li><a href="modal-onload-login.html">Login Page</a> <i class="fa fa-angle-double-right"></i></li>
-            <li><span>modal onload login</span> </li>
-       </ul>
-     </div>
+        <div class="modal-body">
+          <form id="signup-form">
+            <div class="form-group">
+                <label for="Email">Email address</label>
+                    <input type="email" class="form-control" id="signup-email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="signup-password" placeholder="Password">
+            </div>
+            <br>
+            <small class="form-text text-muted">*-required</small>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<!--=================================
-page-title -->
-
-
-<!--=================================
-modal -->
-
- <section class="white-bg">
-  <div class="container">
-     <div class="row">
-        <div class="col-lg-12">
-         <div class="modal-onload" data-target="#myModal1"></div>
-          <div class="modal1 mfp-hide" id="myModal1">
-             <div class="modal-login">
-             <div class="login-bg clearfix">
-               <div class="login-title text-center">
-                 <h2 class="text-white mb-0">Login to your Account</h2>
-                </div>
-                 <div class="login-form">
-                   <div class="section-field mb-20">
-                     <label class="mb-10" for="name">User name* </label>
-                       <input id="name" class="web form-control" type="text" placeholder="User name" name="web">
-                    </div>
-                    <div class="section-field mb-20">
-                     <label class="mb-10" for="Password">Password* </label>
-                       <input id="Password" class="Password form-control" type="password" placeholder="Password" name="Password">
-                    </div>
-                    <div class="section-field">
-                      <div class="remember-checkbox mb-30">
-                         <input type="checkbox" class="form-control" name="two" id="two" />
-                         <label for="two"> Remember me</label>
-                         <a href="password-recovery.html" class="pull-right">Forgot Password?</a>
-                        </div>
-                      </div>
-                      <a href="#" class="button">
-                        <span>Log in</span>
-                        <i class="fa fa-check"></i>
-                     </a>
-                   </div>
-                  <!-- <div class="login-social text-center clearfix">
-                    <h4 class="theme-color mb-30">Login with Social media</h4>
-                    <ul>
-                        <li><a class="fb" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                        <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p"></i> google+</a></li>
-                    </ul>
-                  </div> -->
-               </div>
-             </div>
-          </div>
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Welcome Back!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-     </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+                <label for="Email">Email address</label>
+                    <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="login-password" placeholder="Password">
+            </div>
+            <br>
+            <small class="form-text text-muted">*-required</small>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
- </section>
 
- <!--=================================
-modal -->
-
-  <!--=================================
-modal button-->
-
-<section class="white-bg page-section-ptb">
- <div class="container">
-  <div class="row">
-   <div class="col-md-10 col-md-offset-1 text-center">
-     <a class="popup-modal button btn-lg" href="#myModal1">Login to your account </a>
-     <p class="mt-50 mb-30"><strong>Click on the above to open the modal login pop up</strong></p>
-     <!-- <div class="list-unstyled">
-       <a class="button small green mb-20" href="modal-onload-login.html"> modal onload login </a>
-       <a class="button small gray mb-20" href="modal-onload-register.html"> modal onload register </a>
-       <a class="button small gray mb-20" href="modal-onload-shop.html"> modal onload shop </a>
-       <a class="button small gray mb-20" href="modal-onload-subscribe.html"> modal onload subscribe </a>
-       <a class="button small gray mb-20" href="modal-onload-text.html"> modal onload text </a>
-       <a class="button small gray mb-20" href="modal-onload-video.html"> modal onload video </a>
-     </div>
-     <p class="mt-30">Eaque quaerat cum lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aut, dolorum earum adipisci excepturi dolorem neque nulla delectus cumque incidunt accusantium magnam quo magni iusto temporibus dolores?</p>
-   </div> -->
-   </div>
  </div>
-</section>
-
-<!--=================================
-modal button -->
 
 
-<!--=================================
- footer -->
+
  <!--=================================
   footer -->
 
@@ -260,11 +214,10 @@ modal button -->
           <div class="footer-useful-link footer-hedding">
             <h6 class="text-white mb-30 mt-10 text-uppercase">Navigation</h6>
             <ul>
-              <li class="active"><a href="index.html"> Home </a></li>
+              <li><a href="index.html"> Home </a></li>
               <li><a href="about-us.html"> About Us </a></li>
-              <li><a href="meet-the-team.html"> Meet the Team </i></a></li>
+              <li><a href = "newsfeed.html"> NewsFeed </a></li>
               <li><a href="shop-home.html"> Shop </a></li>
-              <li><a href = "forum.html"> Forum </a> </li>
             </ul>
           </div>
         </div>
@@ -272,8 +225,9 @@ modal button -->
           <div class="footer-useful-link footer-hedding">
             <h6 class="text-white mb-30 mt-10 text-uppercase">Useful Links</h6>
             <ul>
-              <li><a href="modal-onload-login.html">Login</a></li>
-              <li><a href="modal-onload-register.html">Create Account</a></li>
+              <li class="logged-out"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+              <li><a href="signup.html">Create Account</a></li>
+              <li class="logged-in"><a href="#" id="logout">Logout</a></li>
             </ul>
           </div>
         </div>
@@ -319,7 +273,7 @@ modal button -->
                 <script>
                   document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
                 </script>
-              </span> <a > The UWI Biological Society </a> All Rights Reserved</p>
+              </span> <a href="#"> The UWI Biological Society </a> All Rights Reserved</p>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 text-right xs-text-left">
             <div class="footer-widget-social">
@@ -334,30 +288,61 @@ modal button -->
     </div>
   </footer>
 
-<!--=================================
- footer -->
+ <!--=================================
+  footer -->
 
-</div>
-
-
-
-<div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
-
-<!--=================================
- jquery -->
-
-<!-- jquery -->
-<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-
-<!-- plugins-jquery -->
-<script type="text/javascript" src="js/plugins-jquery.js"></script>
-
-<!-- plugin_path -->
-<script type="text/javascript">var plugin_path = 'js/';</script>
+  </div>
 
 
-<!-- custom -->
-<script type="text/javascript" src="js/custom.js"></script>
 
-</body>
-</html>
+ <div id="back-to-top"><a class="top arrow" href="#top"><i class="fa fa-angle-up"></i> <span>TOP</span></a></div>
+
+ <!-- Firebase -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA8bdl1D-1x11UyHBO172TmlXJlgYomIWc",
+      authDomain: "biologicalsocietywebapp.firebaseapp.com",
+      databaseURL: "https://biologicalsocietywebapp.firebaseio.com",
+      projectId: "biologicalsocietywebapp",
+      storageBucket: "biologicalsocietywebapp.appspot.com",
+      messagingSenderId: "273106372445",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    //auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+
+  <!-- custom JS files -->
+  <script src="js/auth.js"></script> 
+  <script src="js/customUser.js"></script>
+
+ <!--=================================
+  jquery -->
+
+ <!-- jquery -->
+ <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+
+ <!-- plugins-jquery -->
+ <script type="text/javascript" src="js/plugins-jquery.js"></script>
+
+ <!-- plugin_path -->
+ <script type="text/javascript">var plugin_path = 'js/';</script>
+
+ <!-- plugins-jquery -->
+ <script type="text/javascript" src="js/slick/slick.min.js"></script>
+
+
+ <!-- custom -->
+ <script type="text/javascript" src="js/custom.js"></script>
+
+ </body>
+ </html>

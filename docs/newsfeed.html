@@ -33,80 +33,6 @@
 <!-- Responsive -->
 <link rel="stylesheet" type="text/css" href="css/responsive.css" />
 
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-}
-
-.bgimg-0, .bgimg-1, .bgimg-2, .bgimg-3 {
-  position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-
-.bgimg-0 {
-  background-image: url("images/mountains.jpg");
-  min-height: 400px;
-}
-
-.bgimg-1 {
-  background-image: url("images/clouds.jpg");
-  min-height: 400px;
-}
-
-.bgimg-2 {
-  background-image: url("images/mountains.jpg");
-  min-height: 400px;
-}
-
-.bgimg-3 {
-  background-image: url("images/forest.jpg");
-  min-height: 400px;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
-
-h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-  }
-}
-</style>
-
-<!--carousel stuff-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -173,9 +99,9 @@ h3 {
                <div class="menu-bar">
                  <ul class="menu-links">
 
-                   <li><a href="index.html"> Home </a></li>
-                   <li class="active"><a href="about-us.html"> About Us </a></li>
-                   <li><a href="meet-the-team.html"> Meet the Team </i></a></li>
+                   <li class="active"><a href="index.html"> Home </a></li>
+                   <li><a href="about-us.html"> About Us </a></li>
+                   <li><a href="meet-the-team.html"> Meet the Team </a></li>
                    <li><a href="shop-home.html"> Shop </a></li>
                    <li><a href = "forum.html"> Forum </a> </li>
 
@@ -193,7 +119,7 @@ h3 {
 
                    <!-- Shopping Cart Icon-->
                    <div class="shpping-cart">
-                     <a class="cart-btn" > <i class="fa fa-shopping-cart icon"></i> <strong class="item">2</strong></a>
+                     <a class="cart-btn" href="#"> <i class="fa fa-shopping-cart icon"></i> <strong class="item">2</strong></a>
                      <div class="cart">
                        <div class="cart-title">
                          <h6 class="uppercase mb-0">Shopping cart</h6>
@@ -216,185 +142,13 @@ h3 {
    </div>
  </header>
 
- <!-- parallax scrolling -->
-
-<div class="bgimg-0">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-	  <li data-target="#myCarousel" data-slide-to="3"></li>
-	  <li data-target="#myCarousel" data-slide-to="4"></li>
-	  <li data-target="#myCarousel" data-slide-to="5"></li>
-	  <li data-target="#myCarousel" data-slide-to="6"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" style="height:400px; width:1350px; align:center;">
-      <div class="item active">
-        <img style="position: absolute; left: 145px;" src="images/C1.jpg" alt="temp0">
-      </div>
-    
-      <div class="item">
-        <img style="position: absolute; left: 165px;" src="images/C3.jpg" alt="temp1">
-      </div>
-
-      <div class="item">
-        <img style="position: absolute; left: 275px;" src="images/C4.jpg" alt="temp2">
-      </div>
-
-      <div class="item">
-        <img style="position: absolute; left: 150px;" src="images/C5.jpg" alt="temp3">
-      </div>
-
-      <div class="item">
-        <img style="position: absolute; left: 285px;" src="images/C6.jpg" alt="temp4">
-      </div>
-
-      <div class="item">
-        <img style="position: absolute; left: 275px;" src="images/C7.jpg" alt="temp5">
-      </div>
-
-      <div class="item">
-        <img style="position: absolute; left: 275px;" src="images/C8.jpg" alt="temp6">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
- </div>
 
 
-  <div class="caption">
-  <span class="border">About us!</span>
-  </div>
 </div>
 
-<div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;color:#fff;">Who is the biological society?</h3>
-  <p style="text-align:center;color:#fff;">
-	The UWI Biological Society is a not for profit, environmental organization which
-	is based at the University of the West Indies St.Augustine Campus and was
-	offically established in April, 1987. We believe that with dedication, cooperation
-	and sound planning, a small group can make important changes within society.
-	We have dedicated ourselves to the protection and restoration of the environment
-	and we will work together to encourage a similar sense of responsibility in others.
-  </p>
-  </div>
-
-<div class="bgimg-2">
-</div>
-
-<div style="position:relative;">
-<div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;color:#fff;">Our mission?</h3>
-  <p style="text-align:center;color:#fff;">
-  To promote responsible cohabitation between humans and the natural
-  environment via the empowerment of individuals within the wider society.
-  </p>
-  </div>
-</div>
-
-<div class="bgimg-2">
-</div>
-
-<div style="position:relative;">
-<div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;color:#fff;">Education. Restoration. Preservation.</h3>
-  <p style="text-align:center;color:#fff;">
-  Education, Restoration, and Preservation. The Society's activities are aimed at the 
-	education of our members as well as the wider public to the beauty & importance 
-	of nature as well as the existing threats to our natural environment, restoration of 
-	damaged or declining wildlife or habitats and the preservation of the 
-	environment. These include: nature tours, field trips, exhibition booths, lectures,
-	workshops, turtle patrols, clean-ups, and conservation and preservation projects.
-  </p>
-  </div>
-</div>
-
-<div class="bgimg-3">
-  <div class="caption">
-  <span class="border">How can i take part?</span>
-  </div>
-</div>
-
-<div style="position:relative;">
-<div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;color:#fff;">Who can join?</h3>
-  <p style="text-align:center;color:#fff;">
-  The society consists mainly of university students and
-	staff of any faculty, but it is open to any person
-	interested in nature and the protection of the natural
-	environment.
-  </p>
-  </div>
-</div>
-
-<div class="bgimg-3">
-</div>
-
-<div style="position:relative;">
-<div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;color:#fff;">Where can we find you?</h3>
-  <p style="text-align:center;color:#fff;">
-	Our office is located on the ground floor of the Natural 
-	Sciences Building in the Faculty of Science and 
-	Technology(Nat Sci FST)! When entering from the 
-	Northern side of the building, we're the second door on
-	the left(A black door with lots of vines, you can't miss it)
-  </p>
-  </div>
-</div>
-<div class="bgimg-3">
-</div>
-
-<div style="position:relative;">
-<div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;color:#fff;">What do we get up to?</h3>
-  <p style="text-align:center;color:#fff;">
-	In addition to our General Meetings and Conservation
-	Conversations, we also host and/or take part in Beach
-	Clean-Ups, Hikes, Nature Walks, Educational
-	Adventures, Sustainability Drives, Initiatives and
-	Legislation both locally and internationally and so much 
-	more!
-  </p>
-  </div>
-</div>
-
-<div class="bgimg-3">
-</div>
-
-<div style="position:relative;">
-<div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
-  <h3 style="text-align:center;color:#fff;">But i knocked and no one was there!</h3>
-  <p style="text-align:center;color:#fff;">
-	We're so sorry!
-	Generally we are 'Open' between 8am and 5pm!
-	we can also be found on social media @ the following 
-	addresses @uwibiosoc(instagram), the UWI Biological Society(facebook)
-	Or email us @ thebiologicalsocietyuwi@gmail.com
-  </p>
-  </div>
-</div>
-
-
-<div class="bgimg-1">
-  <div class="caption">
-  <span class="border">COOL!</span>
-  </div>
-</div>
-
-
+<div class="feedgrabbr_widget" id="fgid_5ee757ccb4c2e1e895459bb1b"></div>
+<script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_5ee757ccb4c2e1e895459bb1b");</script>
+<script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
 
  <!--=================================
   footer -->
@@ -406,9 +160,9 @@ h3 {
           <div class="footer-useful-link footer-hedding">
             <h6 class="text-white mb-30 mt-10 text-uppercase">Navigation</h6>
             <ul>
-              <li><a href="index.html"> Home </a></li>
-              <li class="active"><a href="about-us.html"> About Us </a></li>
-              <li><a href="meet-the-team.html"> Meet the Team </a></li>
+              <li class="active"><a href="index.html"> Home </a></li>
+              <li><a href="about-us.html"> About Us </a></li>
+              <li><a href="meet-the-team.html"> Meet the Team </i></a></li>
               <li><a href="shop-home.html"> Shop </a></li>
               <li><a href = "forum.html"> Forum </a> </li>
             </ul>
@@ -418,8 +172,8 @@ h3 {
           <div class="footer-useful-link footer-hedding">
             <h6 class="text-white mb-30 mt-10 text-uppercase">Useful Links</h6>
             <ul>
-              <li><a href="modal-onload-login.html">Login</a></li>
-              <li><a href="modal-onload-register.html">Create Account</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Create Account</a></li>
             </ul>
           </div>
         </div>
@@ -465,7 +219,7 @@ h3 {
                 <script>
                   document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
                 </script>
-              </span> <a > The UWI Biological Society </a> All Rights Reserved</p>
+              </span> <a href="#"> The UWI Biological Society </a> All Rights Reserved</p>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 text-right xs-text-left">
             <div class="footer-widget-social">
