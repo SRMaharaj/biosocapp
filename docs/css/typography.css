@@ -25,21 +25,12 @@ NOTE: This is typography stylesheet of template, This file contains typography o
 ======================================
 [ End table content ]
 ======================================*/
-@import url(//db.onlinewebfonts.com/c/7dc2acc14e8095fab4eec11eebe99b06?family=Aparajita);
- @import url(//db.onlinewebfonts.com/c/0a5b5c55b73f577ff4ac8c9c31b4c183?family=Aparajita);
- @font-face {font-family: "Aparajita";
-    src: url("//db.onlinewebfonts.com/t/0a5b5c55b73f577ff4ac8c9c31b4c183.eot");
-    src: url("//db.onlinewebfonts.com/t/0a5b5c55b73f577ff4ac8c9c31b4c183.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/0a5b5c55b73f577ff4ac8c9c31b4c183.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/0a5b5c55b73f577ff4ac8c9c31b4c183.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/0a5b5c55b73f577ff4ac8c9c31b4c183.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/0a5b5c55b73f577ff4ac8c9c31b4c183.svg#Aparajita") format("svg");
-}
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 
 /*************************
     General
 *************************/
-body { font-family: 'Aparajita', sans-serif; font-weight: normal; font-style: normal; font-size: 24px; }
+body { font-family: 'Alata', sans-serif; font-weight: normal; font-style: normal; font-size: 24px; }
 a, .btn  { -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s; }
 a:focus { text-decoration: none !important; }
