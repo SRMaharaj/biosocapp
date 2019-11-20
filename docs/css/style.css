@@ -402,7 +402,7 @@ header.one-page.light .navbar-inverse .navbar-nav.hover-effect-01>li>a:hover, he
 .mega-menu > section.menu-list-items > .container > .row > div { height: 100%; }
 .mega-menu > section.menu-list-items .menu-bar {  height: 100%; }
 .mega-menu > section.menu-list-items .menu-bar > ul{ display: table !important; height: 100%; }
-.mega-menu > section.menu-list-items .menu-bar > ul > li { display: table-cell; vertical-align: middle; float: none; }
+.mega-menu > section.menu-list-items .menu-bar > ul > li { display: table-cell; vertical-align: middle; padding-top: 35px;}
 .mega-menu .drop-down, .mega-menu .drop-down-tab-bar, .mega-menu .drop-down-multilevel { top: 100%; }
 .mega-menu > section.menu-list-items .search-cart { height: 100%; }
 .mega-menu > section.menu-list-items .search-cart .search { vertical-align: middle;  display: table; height: 100%; float: left; }
