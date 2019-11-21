@@ -161,6 +161,7 @@
 .mega-menu.desktopTopFixed .menu-logo { padding: 0px; }
 .mega-menu.desktopTopFixed .search-cart i.icon { line-height: 20px; }
 .mega-menu.desktopTopFixed .menu-list-items .menu-logo > li > a img { height: 30px; }
+#welcomeMessage { color: aqua; }
 
 /*fullWidth*/
 .header.fullWidth .container-fluid { padding: 0 60px; }
