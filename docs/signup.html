@@ -35,7 +35,7 @@
   <link rel="stylesheet" type="text/css" href="css/responsive.css" />
 
   <!-- parallax effect -->
-  <style>
+  <!-- <style>
     .parallax {
       /* The image used */
       background-image: url("images/shopProducts/plant.jpg");
@@ -49,7 +49,7 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
@@ -116,12 +116,13 @@
                   <div class="menu-bar">
                     <ul class="menu-links">
 
-                      <li class="active"><a href="signup.html"> Register </a> </li>
-                      <li class="logged-out"><a href="#" data-toggle="modal" data-target="#loginModal"> Login </a></li>
+                      <li class="logged-in" style="display: none;" id="welcomeMessage"></li>
+                      <li class="active logged-out" style="display: none;"><a href="signup.html"> Register </a> </li>
+                      <li class="logged-out" style="display: none;"><a href="#" data-toggle="modal" data-target="#loginModal"> Login </a></li>
                       <li><a href="index.html"> Home </a></li>
                       <li><a href="about-us.html"> About Us </a></li>
                       <li><a href="newsfeed.html"> NewsFeed</a></li>
-                      <li class="logged-in"><a href="#" id="logout"> Logout </a></li>
+                      <li class="logged-in" style="display: none;"><a href="#" id="logout"> Logout </a></li>
                       <li><a href="shop-home.html"> Shop </a></li>
 
                       <div class="search-cart">
@@ -153,15 +154,9 @@
     </header>
 
     <!-- body -->
-    <div>
-      <div class="text-center">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
-          Sign Up
-        </button>
-      </div>
 
-      <!-- Modal -->
+
+      <!-- Signup Modal -->
       <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -185,10 +180,30 @@
                 </div>
                 <br>
                 <small class="form-text text-muted">*-required</small>
+                <p class="errorMessage" style="color: rgb(228, 29, 45);"></p>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Register</button>
               </form>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Message Modal -->
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLabel">Thank you for joining the movement!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <a href="index.html" class="btn btn-outline-primary" role="button">Go to Home</a> 
+            </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
       </div>
@@ -215,17 +230,67 @@
                   <label for="Password">Password</label>
                   <input type="password" class="form-control" id="login-password" placeholder="Password">
                 </div>
-                <br>
-                <small class="form-text text-muted">*-required</small>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="form-text text-muted">*-required</div>
+                <p class="errorMessage" style="color: rgb(228, 29, 45);"></p>
                 <button type="submit" class="btn btn-primary">Login</button>
               </form>
             </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logout Modal  -->
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLabel">Success!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h4>You are now logged out!</h4>
+            </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
       </div>
 
     </div>
+
+    <!--=================================
+page-title-->
+
+<section class="page-title bg-overlay-black-60 parallax" data-jarallax='{"speed": 0.6}' style="background-image: url(images/shopProducts/plant.jpg);">
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-12">
+      <div class="page-title-name">
+         <h1>The UWI Biological Society</h1>
+          <p>Education, Restoration, Preservation</p>
+        <!-- </div>
+          <ul class="page-breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> Home</a> <i class="fa fa-angle-double-right"></i></li>
+            <li><a href="#">Features</a> <i class="fa fa-angle-double-right"></i></li>
+            <li><span>modal onload register</span> </li>
+       </ul>
+     </div> -->
+     <div>
+      <div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signupModal">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--=================================
+page-title -->
 
 
 
@@ -246,7 +311,6 @@
               </ul>
             </div>
           </div>
-<<<<<<< Updated upstream
           <div class="col-lg-2 col-md-2 col-sm-6 xs-mb-30">
             <div class="footer-useful-link footer-hedding">
               <h6 class="text-white mb-30 mt-10 text-uppercase">Useful Links</h6>
@@ -265,18 +329,9 @@
               </li>
               <li><i class="fa fa-phone"></i> <a href="tel:7042791249"> <span>+(868) 339-4168 </span> </a> </li>
               <li><i class="fa fa-envelope-o"></i>Email: thebiologicalsocietyuwi@gmail.com</li>
-=======
+
         </div>
-        <div class="col-lg-2 col-md-2 col-sm-6 xs-mb-30">
-          <div class="footer-useful-link footer-hedding">
-            <h6 class="text-white mb-30 mt-10 text-uppercase">Useful Links</h6>
-            <ul>
-              <li class="logged-out"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-              <li><a href="signup.html">Create Account</a></li>
-              <!-- <li class="logged-in"><a href="#" id="logout">Logout</a></li> -->
->>>>>>> Stashed changes
-            </ul>
-          </div>
+
           <div class="col-lg-4 col-md-4 col-sm-6">
             <h6 class="text-white mb-30 mt-10 text-uppercase">Subscribe to Our Newsletter</h6>
             <p>Sign Up to our Newsletter to get the latest news and offers.</p>
