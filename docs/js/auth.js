@@ -1,6 +1,6 @@
 //listen for Auth Status
 auth.onAuthStateChanged(user => {
-    //console.log(user); //test
+    console.log(user); //test
     if (user) {
         console.log("User is logged in", user);
         adjustLinks(user);  
@@ -32,8 +32,7 @@ loginForm.addEventListener('submit', (e) => {
 
      //login the user
     auth.signInWithEmailAndPassword(email, password).then(cred => {
-        //console.log(cred.user); //test
-        // const modal = document.querySelector('#loginModal');
+        console.log(cred.user); //test
         $('#loginModal').modal('hide');
         loginForm.reset();
         loginForm.querySelector('.errorMessage').innerHTML = '';
