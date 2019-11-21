@@ -54,96 +54,91 @@
  preloader -->
 
 
-    <!--=================================
+        <!--=================================
  header -->
 
-    <header id="header" style="background-color:#00204A">
+ <header id="header" style="background-color:#00204A">
 
-      <div class="topbar">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="topbar-call text-left">
-                <ul>
-                  <li><i class="fa fa-envelope-o theme-color"></i>thebiologicalsocietyuwi@gmail.com</li>
-                  <li><i class="fa fa-phone"></i> <a href="tel:8683394168"> <span>+(868) 339-4168 </span> </a> </li>
-                </ul>
-              </div>
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="topbar-call text-left">
+              <ul>
+                <li><i class="fa fa-envelope-o theme-color"></i>thebiologicalsocietyuwi@gmail.com</li>
+                <li><i class="fa fa-phone"></i> <a href="tel:8683394168"> <span>+(868) 339-4168 </span> </a> </li>
+              </ul>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-              <div class="topbar-social text-right">
-                <ul>
-                  <li><a href="https://www.facebook.com/uwi.biologicalsociety/"><span class="ti-facebook"></span></a></li>
-                  <li><a href="https://www.instagram.com/uwibiosoc/"><span class="ti-instagram"></span></a></li>
-                </ul>
-              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="topbar-social text-right">
+              <ul>
+                <li><a href="https://www.facebook.com/uwi.biologicalsociety/"><span class="ti-facebook"></span></a>
+                </li>
+                <li><a href="https://www.instagram.com/uwibiosoc/"><span class="ti-instagram"></span></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <!--=================================
- mega menu -->
+    </div>
+    <!--=================================
+mega menu -->
 
-      <div class="menu">
-        <!-- menu start -->
-        <nav id="menu" class="mega-menu">
-          <!-- menu list items container -->
-          <section class="menu-list-items">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                  <!-- menu logo -->
-                  <ul class="menu-logo">
-                    <li>
-                      <a href="index.html"><img id="logo_img" src="images/BIOSOCLOGO.png" alt="logo"> </a>
-                    </li>
-                  </ul>
-                  <!-- menu links -->
-                  <div class="menu-bar">
-                    <ul class="menu-links">
-                      <li><a href = "signup.html"> Register </a> </li>
-                      <li class="logged-out"><a href="#" data-toggle="modal" data-target="#loginModal"> Login </a></li>
-                      <li><a href="index.html"> Home </a></li>
-                      <li><a href="about-us.html"> About Us </a></li>
-                      <li><a href="newsfeed.html"> NewsFeed</a></li>
-                      <li class="logged-in"><a href="#" id="logout"> Logout </a></li>
-                      <li class="active"><a href="shop-home.html"> Shop </a></li>
+    <div class="menu">
+      <!-- menu start -->
+      <nav id="menu" class="mega-menu">
+        <!-- menu list items container -->
+        <section class="menu-list-items">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <!-- menu logo -->
+                <ul class="menu-logo">
+                  <li>
+                    <a href="index.html"><img id="logo_img" src="images/BIOSOCLOGO.png" alt="logo"> </a>
+                  </li>
+                </ul>
+                <!-- menu links -->
+                <div class="menu-bar">
+                  <ul class="menu-links">
 
-                      <div class="search-cart">
+                    <li class="logged-in" style="display: none;" id="welcomeMessage"></li>
+                    <li class="logged-out" style="display: none;"><a href="signup.html"> Register </a> </li>
+                    <li class="logged-out" style="display: none;"><a href="#" data-toggle="modal" data-target="#loginModal"> Login </a></li>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="about-us.html"> About Us </a></li>
+                    <li><a href="newsfeed.html"> NewsFeed</a></li>
+                    <li class="logged-in" style="display: none;"><a href="#" id="logout"> Logout </a></li>
+                    <li class="active"><a href="shop-home.html"> Shop </a></li>
 
-                        <!-- Search Button -->
-                        <div class="search">
-                          <a class="search-btn not_click" href="javascript:void(0);"></a>
-                          <div class="search-box not-click">
-                            <input type="text" class="not-click form-control" placeholder="Search" value="" name="s">
-                            <i class="fa fa-search"></i>
+                    <div class="search-cart">
+
+                      <!-- Shopping Cart Icon-->
+                      <div class="shpping-cart">
+                        <a class="cart-btn" href="#"> <i class="fa fa-shopping-cart icon"></i> <strong
+                            class="item">2</strong></a>
+                        <div class="cart">
+                          <div class="cart-title">
+                            <h6 class="uppercase mb-0">Shopping cart</h6>
                           </div>
-                        </div>
-
-                        <!-- Shopping Cart Icon-->
-                        <div class="shpping-cart">
-                          <a class="cart-btn" > <i class="fa fa-shopping-cart icon"></i> <strong class="item">!</strong></a>
-                          <div class="cart">
-                            <div class="cart-title">
-                              <h6 class="uppercase mb-0">Shopping cart</h6>
-                            </div>
-                            <div class="cart-total">
-                              <!-- <h6 class="mb-15"> Total: $0.00</h6> -->
-                              <a class="button" href="shop-shopping-cart.html">View Cart</a>
-                              <a class="button black" href="shop-checkout.html">Checkout</a>
-                            </div>
+                          <div class="cart-total">
+                            <h6 class="mb-15"> Total: $0.00</h6>
+                            <a class="button" href="shop-shopping-cart.html">View Cart</a>
+                            <a class="button black" href="shop-checkout.html">Checkout</a>
                           </div>
                         </div>
                       </div>
-                  </div>
+                    </div>
                 </div>
               </div>
             </div>
-          </section>
-        </nav>
-        <!-- menu end -->
-      </div>
-    </header>
+          </div>
+        </section>
+      </nav>
+      <!-- menu end -->
+    </div>
+  </header>
 
     <!--=================================
  header -->
@@ -154,6 +149,7 @@ shop -->
 
     <!--=================================
  banner -->
+
 
     <section id="home-slider" class="shop-06-banner">
       <div id="main-slider" class="carousel carousel-fade slide" data-ride="carousel">
@@ -531,23 +527,74 @@ product -->
     <!--=================================
 product -->
 
+    <!-- Login/Logout Modal -->
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Welcome Back!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <div class="form-group">
+              <label for="Email">Email address</label>
+              <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="Password">Password</label>
+              <input type="password" class="form-control" id="login-password" placeholder="Password">
+            </div>
+            <div class="form-text text-muted">*-required</div>
+            <p class="errorMessage" style="color: rgb(228, 29, 45);"></p>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Logout Modal  -->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Success!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>You are now logged out!</h4>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
 
 
     <!--=================================
- footer -->
+  footer -->
 
-    <footer class="footer page-section-pt black-bg">
+  <footer class="footer page-section-pt black-bg">
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-6 xs-mb-30">
             <div class="footer-useful-link footer-hedding">
               <h6 class="text-white mb-30 mt-10 text-uppercase">Navigation</h6>
               <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="meet-the-team.html">Meet the Team</a></li>
-                <li class="active"><a href="shop-home.html">Shop</a></li>
-                <li><a href="forum.html">Forum</a></li>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="about-us.html"> About Us </a></li>
+                <li><a href="newsfeed.html"> NewsFeed </a></li>
+                <li><a href="shop-home.html"> Shop </a></li>
               </ul>
             </div>
           </div>
@@ -555,8 +602,9 @@ product -->
             <div class="footer-useful-link footer-hedding">
               <h6 class="text-white mb-30 mt-10 text-uppercase">Useful Links</h6>
               <ul>
-                <li><a href="modal-onload-login.html">Login</a></li>
-                <li><a href="modal-onload-register.html">Create Account</a></li>
+                <li class="logged-out"><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+                <li><a href="signup.html">Create Account</a></li>
+                <!-- <li class="logged-in"><a href="#" id="logout">Logout</a></li> -->
               </ul>
             </div>
           </div>
@@ -568,27 +616,32 @@ product -->
               </li>
               <li><i class="fa fa-phone"></i> <a href="tel:7042791249"> <span>+(868) 339-4168 </span> </a> </li>
               <li><i class="fa fa-envelope-o"></i>Email: thebiologicalsocietyuwi@gmail.com</li>
-            </ul>
-          </div>
+
+        </div>
+
           <div class="col-lg-4 col-md-4 col-sm-6">
             <h6 class="text-white mb-30 mt-10 text-uppercase">Subscribe to Our Newsletter</h6>
             <p>Sign Up to our Newsletter to get the latest news and offers.</p>
             <div class="footer-Newsletter">
               <div id="mc_embed_signup_scroll">
-                <form action="php/mailchimp-action.php" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+                <form action="php/mailchimp-action.php" method="POST" id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form" class="validate">
                   <div id="msg"> </div>
                   <div id="mc_embed_signup_scroll_2">
-                    <input id="mce-EMAIL" class="form-control" type="text" placeholder="Email address" name="email1" value="">
+                    <input id="mce-EMAIL" class="form-control" type="text" placeholder="Email address" name="email1"
+                      value="">
                   </div>
                   <div id="mce-responses" class="clear">
                     <div class="response" id="mce-error-response" style="display:none"></div>
                     <div class="response" id="mce-success-response" style="display:none"></div>
-                  </div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  </div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                   <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_b7ef45306f8b17781aa5ae58a_6b09f39a55" tabindex="-1" value="">
                   </div>
                   <div class="clear">
-                    <button type="submit" name="submitbtn" id="mc-embedded-subscribe" class="button border mt-20 form-button"> Get notified </button>
+                    <button type="submit" name="submitbtn" id="mc-embedded-subscribe"
+                      class="button border mt-20 form-button"> Get notified </button>
                   </div>
                 </form>
               </div>
@@ -602,7 +655,7 @@ product -->
                   <script>
                     document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
                   </script>
-                </span> <a > The UWI Biological Society </a> All Rights Reserved</p>
+                </span> <a href="#"> The UWI Biological Society </a> All Rights Reserved</p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 text-right xs-text-left">
               <div class="footer-widget-social">
@@ -618,7 +671,7 @@ product -->
     </footer>
 
     <!--=================================
- footer -->
+  footer -->
 
   </div>
 
@@ -645,6 +698,7 @@ product -->
   <script type="text/javascript" src="js/custom.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
 
   <script>
   // Your web app's Firebase configuration
@@ -661,7 +715,10 @@ product -->
     firebase.initializeApp(firebaseConfig);
     var db = firebase.firestore();
     firebase.analytics();
+    const auth = firebase.auth();
   </script>
+<script type="text/javascript" src="js/auth.js"></script>
+<script type="text/javascript" src="js/customUser.js"></script>
 <script type="text/javascript" src="shop.js"></script>
 </body>
 
