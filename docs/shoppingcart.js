@@ -15,17 +15,25 @@ var grandTotal = document.querySelector("h3.grand-total");
 //web page itself
 db.collection('cart').orderBy('itemName').onSnapshot(snapshot =>{//collects a snapshot of the database at the point in time of the update
   let changes=snapshot.docChanges();////collects the changes made in the firebase
-
+  var grandTotal=0;
+  var textField = document.querySelector("h3.grand-total");
   changes.forEach(change =>{//gets the change for each element in the firebase
     if(change.type=='added'){//checks to see if the element has an attribute called added which means that the element was not deleted
       renderCart(change.doc);//renders the change to the webpage
+      grandTotal=grandTotal+Number(renderGrandTotal(change.doc,grandTotal).split(".00")[0]);
     }
     else if(change.type=='removed'){//if attribute of element is removed, element was deleted from firebase
       let tr=list.querySelector('[data-id='+change.doc.id+']');//proceeds to get the id for the relevant tag
       list.removeChild(tr);//removes the row of deleted item data from the cart
     }
   });
+  textField.innerHTML = "$"+grandTotal+".00";
 });
+
+function renderGrandTotal(doc){
+  var cost = doc.data().cost;
+  return cost;
+}
 
 
 //This function renders the items from the cart database to the webpage
